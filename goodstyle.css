@@ -1,0 +1,26 @@
+p{
+  font-family: "Avenir Next", Helevetica, sans-serif;
+  font-size: 62px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow:1px 1px 1px #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.banner{
+  font-family: "Avenir Next", Helevetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  background-color: #FFFFFF;
+  opacity: .8;
+  line-height: 40px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 40px;
+}
