@@ -51,10 +51,8 @@ function bannerShowIndex(){
 
   for (var i = 0; i < localStorage.length; i++){
       var key = localStorage.key(i);
-      valgood = JSON.parse(localStorage.getItem(key))['goodclickcount'];
-      valbad = JSON.parse(localStorage.getItem(key))['badclickcount'];
-      goodsum = valgood + 1 || 0;
-      badsum = valbad +1 || 0;
+      goodsum += JSON.parse(localStorage.getItem(key))['goodclickcount'];
+      badsum += JSON.parse(localStorage.getItem(key))['badclickcount'];
   }
 
   if (goodsum >=1 || badsum >=1){
