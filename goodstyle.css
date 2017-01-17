@@ -1,9 +1,12 @@
+body {
+  background-color: #2ecc71;
+}
+
 p{
   font-family: "Avenir Next", Helevetica, sans-serif;
   font-size: 62px;
   text-align: center;
   color: #FFFFFF;
-  text-shadow:1px 1px 1px #000000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,7 +19,6 @@ p{
   font-size: 16px;
   color: #000000;
   background-color: #FFFFFF;
-  opacity: .8;
   line-height: 40px;
   position: absolute;
   top: 0%;

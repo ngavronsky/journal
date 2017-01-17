@@ -1,9 +1,5 @@
 body{
-  background: url(images/bg_home.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #2c3e50;
 }
 
 h1{
@@ -11,7 +7,7 @@ h1{
   text-align: center;
   font-size: 36px;
   color: #FFFFFF;
-  text-shadow:1px 1px 1px #000000;
+  /*text-shadow:1px 1px 1px #000000;*/
   padding-top: 30px;
 }
 
@@ -21,7 +17,7 @@ h2{
   font-size: 36px;
   color: #FFFFFF;
   padding-bottom: 10px;
-  text-shadow:1px 1px 1px #000000;
+  /*text-shadow:1px 1px 1px #000000;*/
 }
 
 .container {
@@ -39,7 +35,6 @@ h2{
   font-size: 16px;
   color: #000000;
   background-color: #FFFFFF;
-  opacity: .8;
   line-height: 40px;
   position: absolute;
   top: 0%;
@@ -50,8 +45,7 @@ h2{
 
 .good {
   font-family: "Avenir Next", Helevetica, sans-serif;
-  background-color: #FFFFFF;
-  opacity: .85;
+  background-color: #1abc9c;
   padding: 80px 80px;
   border: 0px;
   display:inline-block;
@@ -61,8 +55,7 @@ h2{
 
 .bad {
   font-family: "Avenir Next", Helevetica, sans-serif;
-  background-color: #FFFFFF;
-  opacity: .85;
+  background-color: #e74c3c;
   padding: 80px 80px;
   border: 0px;
   display:inline-block;
@@ -71,11 +64,19 @@ h2{
 }
 
 .good:hover {
-  background-color: #FFFFFF;
+  background-color: #16a085;
   opacity: 1;
 }
 
 .bad:hover {
-  background-color: #FFFFFF;
+  background-color: #c0392b;
   opacity: 1;
 }
+
+/*body{
+  background: url(images/bg_home.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
