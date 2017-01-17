@@ -5,13 +5,13 @@ function textEditorData() {
 
   if (localStorage[today]){
       object = JSON.parse(localStorage[today]);
+      object.content = "What's one thing you want to improve?";
       document.getElementById('content').innerHTML=object.content;
   }
 }
 
 function saveData() {
   object.content = document.getElementById('content').innerHTML;
-  console.log("saving");
   localStorage[today] = JSON.stringify(object);
 }
 

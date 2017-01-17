@@ -33,13 +33,12 @@ h1{
 .container {
   background-color: #FFFFFF;
   opacity: .95;
-  border-radius: 2px;
   font-family: "Avenir Next", Helevetica, sans-serif;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  height: 500px;
-  width: 600px;
+  height: 100px;
+  width: 500px;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 0 1px 6px rgba(0,0,0,.04);
 }
@@ -49,6 +48,6 @@ h1{
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 24px;
+  font-size: 18px;
   outline: 0px solid transparent;
 }
