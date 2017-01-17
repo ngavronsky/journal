@@ -44,48 +44,55 @@ function badSaveData(){
 }
 
 function bannerShowIndex(){
-  var valgood = 0;
-  var valbad = 0;
   var goodsum = 0;
   var badsum = 0;
 
   for (var i = 0; i < localStorage.length; i++){
       var key = localStorage.key(i);
-      goodsum += JSON.parse(localStorage.getItem(key))['goodclickcount'];
-      badsum += JSON.parse(localStorage.getItem(key))['badclickcount'];
+      goodsum += JSON.parse(localStorage.getItem(key))['goodclickcount'] || 0;
+      badsum += JSON.parse(localStorage.getItem(key))['badclickcount'] || 0;
   }
 
   if (goodsum >=1 || badsum >=1){
-    document.getElementById('return').innerHTML = "Welcome back! You've had "+goodsum +" good days and "+badsum +" bad days.";
+    document.getElementById('return').innerHTML = "Welcome back! You've had "+goodsum +" good and "+badsum +" bad days.";
     } else {
       document.getElementById('return').style.display="none";
     }
 }
 
-/*
-function bannerShowIndexToo(){
+function bannerShowGood(){
   var goodsum = 0;
   var badsum = 0;
 
-if(localStorage.length > 0){
   for (var i = 0; i < localStorage.length; i++){
-    var key = localStorage.key(i);
-    var valgood = JSON.parse(localStorage.getItem(key))['goodclickcount'];
-    var valbad = JSON.parse(localStorage.getItem(key))['badclickcount'];
-    goodsum = valgood + 1;
-    badsum = valbad + 1;
+      var key = localStorage.key(i);
+      goodsum += JSON.parse(localStorage.getItem(key))['goodclickcount'] || 0;
+      badsum += JSON.parse(localStorage.getItem(key))['badclickcount'] || 0;
   }
-    document.getElementById('return').innerHTML = "Welcome back! You've had "+goodsum +" good days and "+badsum +" bad days.";
+
+  if (goodsum >=1){
+    document.getElementById('return').innerHTML = "Keep it up and stay positive!";
     } else {
-      goodsum = 0;
-      badsum = 0;
-      valgood = {};
-      valbad = {};
       document.getElementById('return').style.display="none";
     }
-
 }
-*/
+
+function bannerShowBad(){
+  var goodsum = 0;
+  var badsum = 0;
+
+  for (var i = 0; i < localStorage.length; i++){
+      var key = localStorage.key(i);
+      goodsum += JSON.parse(localStorage.getItem(key))['goodclickcount'] || 0;
+      badsum += JSON.parse(localStorage.getItem(key))['badclickcount'] || 0;
+  }
+
+  if (badsum >=1){
+    document.getElementById('return').innerHTML = "That's okay. Let's come up with a plan to make things better.";
+    } else {
+      document.getElementById('return').style.display="none";
+    }
+}
 
 /*
 function bannerShowGood() {
