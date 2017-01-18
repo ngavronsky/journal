@@ -75,6 +75,15 @@ h1{
   transform: translateY(4px);
 }
 
+.journals{
+  position: absolute;
+  background: #FFFFFF;
+  top: 80%;
+  left: 50%;
+  height: 100px;
+  width: 500px;
+}
+
 /*body{
   background: url(images/bg_bad_5.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
