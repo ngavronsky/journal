@@ -94,20 +94,60 @@ function bannerShowBad(){
     }
 }
 
-/*
-function bannerShowGood() {
-  if (localStorage.goodclickcount >= 1) {
-      document.getElementById('return').innerHTML = "Keep it up and stay positive! You've had "+localStorage.goodclickcount +" good days.";
-    } else {
-      document.getElementById('return').style.display="none";
+
+/* bad functions*/
+var object = {};
+
+function textEditorData() {
+  if (localStorage[today]){
+      object = JSON.parse(localStorage[today]);
+      document.getElementById('content').innerHTML=object.content;
+  }
+}
+
+function saveData() {
+  object.content = document.getElementById('content').innerHTML;
+  localStorage[today] = JSON.stringify(object);
+  window.location.reload();
+}
+
+function shareData() {
+  var journal = "";
+  for (var i = 0; i < localStorage.length; i++){
+  var key = localStorage.key(i);
+  journal = JSON.parse(localStorage.getItem(key))['content'];
+
+    var board = document.createElement('div')
+    board.className = "prints";
+
+      if (journal != undefined){
+      document.getElementById('journals').appendChild(board).innerHTML = key +"<br />" + journal;
+      } else {
+      document.getElementById('journals').style.display="none";
+      }
     }
 }
 
-function bannerShowBad() {
-  if (localStorage.badclickcount >= 1) {
-      document.getElementById('return').innerHTML = "That's okay. Let's come up with a plan to make things better.";
+textEditorData();
+
+function badLoad(){
+  bannerShowBad();
+  shareData();
+}
+
+/*
+function printData() {
+var journal = "";
+  for (var i = 0; i < localStorage.length; i++){
+    var key = localStorage.key(i);
+    journal = JSON.parse(localStorage.getItem(key))['content'];
+    console.log(key);
+    console.log(journal);
+  }
+  if (journal != undefined){
+    document.getElementById('journals').innerHTML = key +"<br />" + journal;
     } else {
-      document.getElementById('return').style.display="none";
-    }
+    document.getElementById('journals').style.display="none";
+  }
 }
 */

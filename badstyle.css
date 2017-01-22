@@ -78,10 +78,28 @@ h1{
 .journals{
   position: absolute;
   background: #FFFFFF;
-  top: 80%;
-  left: 50%;
+  top: 50%;
   height: 100px;
-  width: 500px;
+  width: 200px;
+}
+
+.prints {
+  font-family: "Avenir Next", Helevetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  display: inline-block; 
+  border: none; 
+  width: 125px;
+  background: #FFFFFF;
+  padding: 10px;
+}
+
+.journals{
+  position: absolute;
+  background: none;
+  top: 40%;
+  left: 24%;
+  width:500px;    
 }
 
 /*body{
